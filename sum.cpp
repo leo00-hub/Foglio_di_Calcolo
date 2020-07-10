@@ -26,3 +26,8 @@ float Sum::compute()
         sum += it->getValue();
     return sum;
 }
+
+float Sum::getSumValue() const
+{
+    return sumValue;
+}

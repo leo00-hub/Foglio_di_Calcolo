@@ -9,12 +9,13 @@
 class Cell : public Subject
 {
 public:
-    Cell(Sum* s,Mean* me,Max* ma,Min* mi);
+    explicit Cell(Sum* s,Mean* me,Max* ma,Min* mi);
     virtual ~Cell();
     void attach() override;
     void detach() override;
     void notify() override;
     float getValue() const;
+    void setValue(float v);
 private:
     float value;
     Sum* sumFunction;

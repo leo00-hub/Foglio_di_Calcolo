@@ -10,29 +10,48 @@ Cell::~Cell(){
 
 void Cell::attach()
 {
-    sumFunction->subscribe(this);
-    meanFunction->subscribe(this);
-    maxFunction->subscribe(this);
-    minFunction->subscribe(this);
+    if(sumFunction!= nullptr)
+        sumFunction->subscribe(this);
+    if(meanFunction!=nullptr)
+        meanFunction->subscribe(this);
+    if(maxFunction!=nullptr)
+        maxFunction->subscribe(this);
+    if(minFunction!=nullptr)
+        minFunction->subscribe(this);
 }
 
 void Cell::detach()
 {
-   sumFunction->unsubscribe(this);
-   meanFunction->unsubscribe(this);
-   maxFunction->unsubscribe(this);
-   minFunction->unsubscribe(this);
+    if(sumFunction)
+        sumFunction->unsubscribe(this);
+    if(meanFunction)
+        meanFunction->unsubscribe(this);
+    if(maxFunction)
+        maxFunction->unsubscribe(this);
+    if(minFunction)
+        minFunction->unsubscribe(this);
+    notify();
 }
 
 void Cell::notify()
 {
-    sumFunction->update();
-    meanFunction->update();
-    maxFunction->update();
-    minFunction->update();
+    if(sumFunction)
+        sumFunction->update();
+    if(meanFunction)
+        meanFunction->update();
+    if(maxFunction)
+        maxFunction->update();
+    if(minFunction)
+        minFunction->update();
 }
 
 float Cell::getValue() const
 {
-   return value;
+    return value;
+}
+
+void Cell::setValue(float v)
+{
+    value = v;
+    notify();
 }

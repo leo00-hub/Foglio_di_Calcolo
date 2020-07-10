@@ -22,11 +22,21 @@ void Max::unsubscribe(Subject *s)
 
 float Max::compute()
 {
-    float max = (*(subjects.begin()))->getValue();
-    for(auto it : subjects){
-        if(it->getValue() > max)
-            max = it->getValue();
+    float max;
+    if(subjects.size() != 0){
+        max = (*(subjects.begin()))->getValue();
+        for(auto it : subjects){
+            if(it->getValue() > max)
+                max = it->getValue();
+        }
     }
+    else
+        max = 0;
     return max;
 
+}
+
+float Max::getMaxValue() const
+{
+   return maxValue;
 }

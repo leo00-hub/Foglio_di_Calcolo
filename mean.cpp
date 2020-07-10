@@ -30,3 +30,8 @@ float Mean::compute()
     mean /= count;
     return mean;
 }
+
+float Mean::getMeanValue() const
+{
+    return meanValue;
+}

@@ -14,6 +14,7 @@ public:
     void subscribe(Subject *s) override;
     void unsubscribe(Subject *s) override;
     float compute() override;
+    float getMinValue() const;
 private:
     std::list<Cell*> subjects;
     float minValue;

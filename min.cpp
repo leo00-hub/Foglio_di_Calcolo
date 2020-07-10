@@ -21,10 +21,20 @@ void Min::unsubscribe(Subject *s)
 
 float Min::compute()
 {
-    float min = (*(subjects.begin()))->getValue();
-    for(auto it : subjects){
-        if(it->getValue() < min)
-            min = it->getValue();
+    float min;
+    if(subjects.size()!= 0){
+        min = (*(subjects.begin()))->getValue();
+        for(auto it : subjects){
+            if(it->getValue() < min)
+                min = it->getValue();
+        }
     }
+    else
+        min = 0;
     return min;
+}
+
+float Min::getMinValue() const
+{
+    return minValue;
 }
