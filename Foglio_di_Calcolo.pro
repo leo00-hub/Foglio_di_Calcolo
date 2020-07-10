@@ -1,5 +1,4 @@
-QT       += core gui
-
+QT       += core gui testlib
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -15,14 +14,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+
 SOURCES += \
+    cell.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    max.cpp \
+    mean.cpp \
+    min.cpp \
+    sum.cpp
 
 HEADERS += \
+    Function.h \
     Observer.h \
     Subject.h \
-    mainwindow.h
+    cell.h \
+    mainwindow.h \
+    max.h \
+    mean.h \
+    min.h \
+    sum.h
 
 FORMS += \
     mainwindow.ui

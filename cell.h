@@ -17,7 +17,7 @@ public:
     float getValue() const;
     void setValue(float v);
 private:
-    float value;
+    float value = 0;
     Sum* sumFunction;
     Mean* meanFunction;
     Max* maxFunction;

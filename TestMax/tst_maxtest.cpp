@@ -4,10 +4,7 @@
 #include "cell.h"
 #include "max.cpp"
 #include "cell.cpp"
-#include "sum.cpp"
-#include "min.cpp"
-#include "mean.cpp"
-// add necessary includes here
+
 
 class MaxTest : public QObject
 {

@@ -10,14 +10,15 @@ Cell::~Cell(){
 
 void Cell::attach()
 {
-    if(sumFunction!= nullptr)
+    if(sumFunction)
         sumFunction->subscribe(this);
-    if(meanFunction!=nullptr)
+    if(meanFunction)
         meanFunction->subscribe(this);
-    if(maxFunction!=nullptr)
+    if(maxFunction)
         maxFunction->subscribe(this);
-    if(minFunction!=nullptr)
+    if(minFunction)
         minFunction->subscribe(this);
+    notify();
 }
 
 void Cell::detach()
