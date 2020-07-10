@@ -4,8 +4,8 @@
 
 class Observer{
 public:
-    virtual ~Observer();
-    virtual void update(Subject* s) = 0;
+    virtual ~Observer(){}
+    virtual void update() = 0;
     virtual void subscribe(Subject* s) = 0;
     virtual void unsubscribe(Subject* s) = 0;
 };
