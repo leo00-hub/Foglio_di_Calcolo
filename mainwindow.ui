@@ -146,7 +146,7 @@
      <string>Min</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="sumCell">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -156,7 +156,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit_2">
+   <widget class="QTextEdit" name="meanCell">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -166,7 +166,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit_3">
+   <widget class="QTextEdit" name="maxCell">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -176,7 +176,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit_4">
+   <widget class="QTextEdit" name="minCell">
     <property name="geometry">
      <rect>
       <x>410</x>

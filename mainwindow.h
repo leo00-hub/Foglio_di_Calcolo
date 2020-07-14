@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "sum.h"
+#include "mean.h"
+#include "max.h"
+#include "min.h"
+#include "cell.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +20,15 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_tableWidget_cellChanged(int row, int column);
+
 private:
     Ui::MainWindow *ui;
+    Sum* sumFunction;
+    Mean* meanFunction;
+    Max* maxFunction;
+    Min* minFunction;
+
 };
 #endif // MAINWINDOW_H

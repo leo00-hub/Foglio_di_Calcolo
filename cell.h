@@ -9,19 +9,24 @@
 class Cell : public Subject
 {
 public:
-    Cell(Sum* s,Mean* me,Max* ma,Min* mi);
+    Cell(Sum* s,Mean* me,Max* ma,Min* mi,int r = 0,int c = 0,float v = 0);
     virtual ~Cell();
     void attach() override;
     void detach() override;
     void notify() override;
     float getValue() const;
     void setValue(float v);
+    int getRow() const;
+    int getColumn() const;
+
 private:
-    float value = 0;
     Sum* sumFunction;
     Mean* meanFunction;
     Max* maxFunction;
     Min* minFunction;
+    int row;
+    int column;
+    float value;
 };
 
 #endif // CELL_H

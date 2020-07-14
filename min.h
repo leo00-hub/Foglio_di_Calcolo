@@ -15,9 +15,12 @@ public:
     void unsubscribe(Subject *s) override;
     float compute() override;
     float getMinValue() const;
+    Cell* getLastCellFound() const;
+    bool findCell(int row,int column);
 private:
     std::list<Cell*> subjects;
     float minValue;
+    Cell* lastCellFound;
 };
 
 #endif // MIN_H

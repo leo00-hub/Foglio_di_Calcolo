@@ -15,9 +15,12 @@ public:
     void unsubscribe(Subject *s) override;
     float compute() override;
     float getMaxValue() const;
+    Cell* getLastCellFound() const;
+    bool findCell(int row,int column);
 private:
     std::list<Cell*> subjects;
     float maxValue;
+    Cell* lastCellFound;
 
 };
 

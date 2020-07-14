@@ -1,6 +1,6 @@
 #include "cell.h"
 
-Cell::Cell(Sum* s,Mean* me,Max* ma,Min* mi) : sumFunction(s),meanFunction(me),maxFunction(ma),minFunction(mi){
+Cell::Cell(Sum* s,Mean* me,Max* ma,Min* mi,int r,int c,float v) : sumFunction(s),meanFunction(me),maxFunction(ma),minFunction(mi),row(r),column(c),value(v){
     attach();
 }
 
@@ -55,4 +55,14 @@ void Cell::setValue(float v)
 {
     value = v;
     notify();
+}
+
+int Cell::getRow() const
+{
+    return row;
+}
+
+int Cell::getColumn() const
+{
+    return column;
 }
