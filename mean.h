@@ -15,12 +15,8 @@ public:
     void unsubscribe(Subject *s) override;
     float compute() override;
     float getMeanValue() const;
-    Cell* getLastCellFound() const;
-    float findCell(int row,int column);
 private:
-    std::list<Cell*> subjects;
     float meanValue;
-    Cell* lastCellFound;
 };
 
 #endif // MEAN_H

@@ -36,20 +36,3 @@ float Mean::getMeanValue() const
     return meanValue;
 }
 
-Cell *Mean::getLastCellFound() const
-{
-    return lastCellFound;
-}
-
-float Mean::findCell(int row, int column)
-{
-    bool found = false;
-    for(auto it : subjects){
-        if(it->getRow() == row && it->getColumn() == column){
-            found = true;
-            lastCellFound = it;
-            break;
-        }
-    }
-    return found;
-}

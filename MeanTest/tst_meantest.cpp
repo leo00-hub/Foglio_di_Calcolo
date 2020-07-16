@@ -4,6 +4,7 @@
 #include "cell.h"
 #include "mean.cpp"
 #include "cell.cpp"
+#include "Function.cpp"
 
 class MeanTest : public QObject
 {

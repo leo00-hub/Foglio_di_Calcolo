@@ -4,6 +4,7 @@
 #include "cell.h"
 #include "max.cpp"
 #include "cell.cpp"
+#include "Function.cpp"
 
 
 class MaxTest : public QObject

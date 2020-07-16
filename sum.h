@@ -15,12 +15,8 @@ public:
     void unsubscribe(Subject *s) override;
     float compute() override;
     float getSumValue() const;
-    Cell* getLastCellFound() const;
-    bool findCell(int row,int column);
 private:
-    std::list<Cell*> subjects;
     float sumValue;
-    Cell* lastCellFound;
 };
 
 #endif // SUM_H

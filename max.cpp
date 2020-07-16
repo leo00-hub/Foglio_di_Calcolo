@@ -40,21 +40,3 @@ float Max::getMaxValue() const
 {
     return maxValue;
 }
-
-Cell *Max::getLastCellFound() const
-{
-    return lastCellFound;
-}
-
-bool Max::findCell(int row, int column)
-{
-    bool found = false;
-    for(auto it : subjects){
-        if(it->getRow() == row && it->getColumn() == column){
-            found = true;
-            lastCellFound = it;
-            break;
-        }
-    }
-    return found;
-}

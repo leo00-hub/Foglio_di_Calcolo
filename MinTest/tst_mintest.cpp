@@ -4,6 +4,7 @@
 #include "cell.h"
 #include "min.cpp"
 #include "cell.cpp"
+#include "Function.cpp"
 
 class MinTest : public QObject
 {

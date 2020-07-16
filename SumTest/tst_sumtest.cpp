@@ -4,6 +4,7 @@
 #include "cell.h"
 #include "sum.cpp"
 #include "cell.cpp"
+#include "Function.cpp"
 
 class SumTest : public QObject
 {

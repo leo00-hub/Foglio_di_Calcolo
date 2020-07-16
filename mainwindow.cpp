@@ -15,6 +15,10 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete sumFunction;
+    delete meanFunction;
+    delete maxFunction;
+    delete minFunction;
 }
 
 
@@ -30,6 +34,7 @@ void MainWindow::on_tableWidget_cellChanged(int row, int column)
     }
     else{
         Cell* cellChanged = new Cell(sumFunction,meanFunction,maxFunction,minFunction,row,column,q->text().toFloat());
+        cellChanged->notify();
     }
     ui->sumCell->setPlainText(QString::number(sumFunction->getSumValue()));
     ui->meanCell->setPlainText(QString::number(meanFunction->getMeanValue()));
