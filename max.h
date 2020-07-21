@@ -14,10 +14,6 @@ public:
     void subscribe(Subject *s) override;
     void unsubscribe(Subject *s) override;
     float compute() override;
-    float getMaxValue() const;
-private:
-    float maxValue;
-
 };
 
 #endif // MAX_H

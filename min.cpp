@@ -4,7 +4,7 @@
 
 void Min::update()
 {
-   minValue = compute();
+   value = compute();
 }
 
 void Min::subscribe(Subject *s)
@@ -33,10 +33,4 @@ float Min::compute()
         min = 0;
     return min;
 }
-
-float Min::getMinValue() const
-{
-    return minValue;
-}
-
 

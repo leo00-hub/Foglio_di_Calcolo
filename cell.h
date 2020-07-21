@@ -9,7 +9,7 @@
 class Cell : public Subject
 {
 public:
-    Cell(Sum* s,Mean* me,Max* ma,Min* mi,int r = 0,int c = 0,float v = 0);
+    Cell(Function* s,Function* me,Function* ma,Function* mi,int r = 0,int c = 0,float v = 0);
     virtual ~Cell();
     void attach() override;
     void detach() override;

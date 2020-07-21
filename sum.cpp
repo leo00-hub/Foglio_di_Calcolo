@@ -4,7 +4,7 @@
 
 void Sum::update()
 {
-    sumValue = compute();
+    value = compute();
 }
 
 void Sum::subscribe(Subject *s)
@@ -26,10 +26,4 @@ float Sum::compute()
         sum += it->getValue();
     return sum;
 }
-
-float Sum::getSumValue() const
-{
-    return sumValue;
-}
-
 

@@ -5,7 +5,7 @@
 
 void Max::update()
 {
-    maxValue = compute();
+    value = compute();
 }
 
 void Max::subscribe(Subject *s)
@@ -34,9 +34,4 @@ float Max::compute()
         max = 0;
     return max;
 
-}
-
-float Max::getMaxValue() const
-{
-    return maxValue;
 }

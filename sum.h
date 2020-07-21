@@ -14,9 +14,6 @@ public:
     void subscribe(Subject *s) override;
     void unsubscribe(Subject *s) override;
     float compute() override;
-    float getSumValue() const;
-private:
-    float sumValue;
 };
 
 #endif // SUM_H

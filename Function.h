@@ -10,7 +10,9 @@ public:
     virtual float compute() = 0;
     virtual bool findCell(int row,int column);
     Cell* getLastCellFound() const;
+    float getValue() const;
 protected:
+    float value;
     std::list<Cell*> subjects;
     Cell* lastCellFound;
 };

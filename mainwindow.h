@@ -25,10 +25,10 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    Sum* sumFunction;
-    Mean* meanFunction;
-    Max* maxFunction;
-    Min* minFunction;
+    Function* sumFunction;
+    Function* meanFunction;
+    Function* maxFunction;
+    Function* minFunction;
 
 };
 #endif // MAINWINDOW_H

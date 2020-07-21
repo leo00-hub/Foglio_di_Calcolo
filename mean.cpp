@@ -4,7 +4,7 @@
 
 void Mean::update()
 {
-    meanValue = compute();
+    value = compute();
 }
 
 void Mean::subscribe(Subject *s)
@@ -30,9 +30,3 @@ float Mean::compute()
     mean /= count;
     return mean;
 }
-
-float Mean::getMeanValue() const
-{
-    return meanValue;
-}
-

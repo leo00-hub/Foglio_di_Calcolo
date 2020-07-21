@@ -34,11 +34,10 @@ void MainWindow::on_tableWidget_cellChanged(int row, int column)
     }
     else{
         Cell* cellChanged = new Cell(sumFunction,meanFunction,maxFunction,minFunction,row,column,q->text().toFloat());
-        cellChanged->notify();
     }
-    ui->sumCell->setPlainText(QString::number(sumFunction->getSumValue()));
-    ui->meanCell->setPlainText(QString::number(meanFunction->getMeanValue()));
-    ui->maxCell->setPlainText(QString::number(maxFunction->getMaxValue()));
-    ui->minCell->setPlainText(QString::number(minFunction->getMinValue()));
+    ui->sumCell->setPlainText(QString::number(sumFunction->getValue()));
+    ui->meanCell->setPlainText(QString::number(meanFunction->getValue()));
+    ui->maxCell->setPlainText(QString::number(maxFunction->getValue()));
+    ui->minCell->setPlainText(QString::number(minFunction->getValue()));
 }
 

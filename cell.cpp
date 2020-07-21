@@ -1,7 +1,12 @@
 #include "cell.h"
 
-Cell::Cell(Sum* s,Mean* me,Max* ma,Min* mi,int r,int c,float v) : sumFunction(s),meanFunction(me),maxFunction(ma),minFunction(mi),row(r),column(c),value(v){
+Cell::Cell(Function* s,Function* me,Function* ma,Function* mi,int r,int c,float v) : row(r),column(c),value(v){
+    sumFunction = dynamic_cast<Sum*>(s);
+    meanFunction = dynamic_cast<Mean*>(me);
+    maxFunction = dynamic_cast<Max*>(ma);
+    minFunction = dynamic_cast<Min*>(mi);
     attach();
+
 }
 
 Cell::~Cell(){

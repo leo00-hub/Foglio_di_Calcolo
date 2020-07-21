@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Foglio di Calcolo</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTableWidget" name="tableWidget">
@@ -155,6 +155,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QTextEdit" name="meanCell">
     <property name="geometry">
@@ -164,6 +167,9 @@
       <width>91</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QTextEdit" name="maxCell">
@@ -175,6 +181,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QTextEdit" name="minCell">
     <property name="geometry">
@@ -184,6 +193,9 @@
       <width>91</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
